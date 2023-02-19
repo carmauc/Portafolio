@@ -1,9 +1,14 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { Bars4Icon } from '@heroicons/react/20/solid'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import Icons from './Icons'
 import "./Drop.css"
+
 const Dropdown = () => {
+
+  
   return (
     <nav className="p-3 border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
 
@@ -57,7 +62,16 @@ const Dropdown = () => {
                 />
               )}
               </div>
-              Archive
+              <Link
+                activeClass="active"
+                to="section3"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 3
+              </Link>
             </button>
           )}
         </Menu.Item>
@@ -80,7 +94,16 @@ const Dropdown = () => {
                   aria-hidden="true"
                 />
               )}
-              Archive2
+               <Link
+                activeClass="active"
+                to="section2"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 2
+              </Link>
             </button>
           )}
         </Menu.Item>
@@ -95,6 +118,10 @@ s        </Menu.Item> */}
       </Transition>
     </Menu>
     </div>
+
+    {/* <a className='absolute z-50 bottom-12' onClick={(event) => this.scrollToTop(event.target)}>To the top!</a> */}
+
+    
     </nav>
   )
 }  

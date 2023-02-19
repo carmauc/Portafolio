@@ -1,22 +1,23 @@
 import React from 'react'
 import "./Card.css"
-
-const Card = () => {
+const Card = ({data, open}) => {
+    const {address, description, imageUrl } = data;
   return (
-        <div className="card">
+        <div className="card" onClick={open}>
             <div className="face face1">
                 <div className="content">
-                    <div className="icon">
-                        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <div className="icon overflow-hidden cursor-pointer">
+                    <img className="w-full" alt='captura pagina web' src={imageUrl}/>
                     </div>
                 </div>
             </div>
             <div className="face face2">
                 <div className="content">
+                <p>{description}</p>
                     <h3>
-                        <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
+                        <a href={address} target="_blank">{address}</a>
                     </h3>
-                    <p>This is where I network and build my professional protfolio.</p>
+                    
                 </div>
             </div>
         </div>

@@ -24,8 +24,11 @@ function Archive(props) {
           stroke="#C4B5FD"
           strokeWidth="2"
         />
+
+        
         <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
       </svg>
+      
     )
   }
   

@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  h1 {
+    font-family: Open Sans, system-ui, sans-serif;
+    font-weight: bold;
+  }
+  h2 {
+    font-family: Open Sans, system-ui, sans-serif;
+    font-weight: bold;
+  }
+
+
+}
+
 
 /* /* @layer utilities {
     .bg-size-2em {
