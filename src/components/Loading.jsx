@@ -1,4 +1,5 @@
-import './loading.css'
+import './StyleLoad.css'
+
 const Loading = () => {
 	document.body.style = 'background-color: black'
 	return (
