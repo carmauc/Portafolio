@@ -5,9 +5,9 @@ const Header = () => {
 	const [navbar, setNavbar] = useState(false)
 
 	return (
-		<nav className='relative px-2 sm:px-4 py-3 w-full bg-zinc-900 z-50 '>
+		<nav className='relative px-4 md:px-4 py-3 w-full bg-zinc-900 z-50 '>
 			<div className='container flex flex-wrap items-center justify-between mx-auto'>
-				<a className='relative hover:animate-rubber'>
+				<a className='relative ml-4 hover:animate-rubber'>
 					<svg
 						className='absolute fill-sky-600 brightness-150  hover:shadow-lg hover:shadow-sky-600/50 rounded-full w-12 h-12'
 						xmlns='http://www.w3.org/2000/svg'
@@ -19,7 +19,7 @@ const Header = () => {
 				</a>
 				<div className='flex space-x-5 md:order-2 '>
 					<a
-						href='https://drive.google.com/file/d/1uarg1jlUxmW3kc4_cV6xRetp8oNWJxcl/view?usp=share_link'
+						href='https://drive.google.com/file/d/1KawHT1_0x8Rp3rEhvmBI83eEEM156AHE/view?usp=share_link'
 						target='_blank'
 						className='py-1 px-5 relative border border-sky-600 brightness-150 font-semibold tracking-wide leading-none overflow-hidden hover:text-teal-600 group'
 						type='button'
@@ -30,12 +30,12 @@ const Header = () => {
 						</span>
 					</a>
 					<button
-						className='relative md:hidden p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
+						className='relative md:hidden p-2 text-gray-700 rounded-md outline-none animate-pulse'
 						onClick={() => setNavbar(!navbar)}>
 						{navbar ? (
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								className='w-6 h-6'
+								className=' w-6 h-6 '
 								viewBox='0 0 20 20'
 								fill='currentColor'>
 								<path
@@ -47,7 +47,7 @@ const Header = () => {
 						) : (
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								className='w-6 h-6'
+								className='w-6 h-6 '
 								fill='none'
 								viewBox='0 0 24 24'
 								stroke='currentColor'
@@ -66,7 +66,7 @@ const Header = () => {
 					className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
 						navbar ? 'block' : 'hidden'
 					}`}>
-					<ul className='flex flex-col mt-12 md:mt-0 md:flex-row items-center justify-center space-y-8 md:space-x-12 md:space-y-0'>
+					<ul className='flex flex-col mt-12 md:mt-0 md:flex-row items-center justify-center space-y-8 md:space-x-12 md:space-y-0 animate-fadein'>
 						<li className='text-gray-400 hover:text-sky-600 hover-underline-animation cursor-pointer'>
 							<Link
 								to='home'

@@ -12,7 +12,7 @@ const Modal = ({ data, close }) => {
 			<a
 				href={address}
 				target='_blank'
-				className='fixed bottom-0 left-0 flex justify-center items-center bg-sky-600 brightness-150 w-full h-12 text-lg text-black'
+				className='fixed bottom-0 left-0 flex justify-center items-center bg-sky-600 brightness-150 w-full h-12 text-sm md:text-lg text-black'
 				rel='noreferrer'>
 				{address}
 			</a>

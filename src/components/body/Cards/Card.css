@@ -123,7 +123,7 @@ i {
 	color: #a9a4a4;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
 	.card .face {
 		display: none;
 	}
@@ -145,4 +145,4 @@ i {
 	.card:hover .face.face2 {
 		display: none;
 	}
-}
+} */
