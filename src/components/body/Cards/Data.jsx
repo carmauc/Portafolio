@@ -1,8 +1,10 @@
-import Maurovet from '../../../assets/maurovet.jpg';
-import Maskotopia from '../../../assets/maskotopia.jpg';
-import Daxan from '../../../assets/daxan.jpg';
-import IPS from '../../../assets/ipsmintic.jpg';
-import Seguimiento from '../../../assets/seguimiento-pacientes.jpg';
+import Maurovet from '../../../assets/maurovet.jpg'
+import Maskotopia from '../../../assets/maskotopia.jpg'
+import Daxan from '../../../assets/daxan.jpg'
+import IPS from '../../../assets/ipsmintic.jpg'
+import Seguimiento from '../../../assets/seguimiento-pacientes.jpg'
+import ControlGastos from '../../../assets/controlgastos.jpg'
+
 export const paginas = [
 	{
 		id: 1,
@@ -34,4 +36,10 @@ export const paginas = [
 		address: 'https://maurovet-pacientes.netlify.app/',
 		description: 'Seguimiento Pacientes Veterinaria',
 	},
-];
+	{
+		id: 6,
+		imageUrl: ControlGastos,
+		address: 'https://controlgastos-mauro.netlify.app/',
+		description: 'Control de Gastos con un Presupuesto Base',
+	},
+]

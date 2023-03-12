@@ -31,7 +31,13 @@ const Contact = () => {
 						Si necesitas contactarme puedes usar el botón de “Contáctame” o bien
 						puedes llenar este formulario, responderé lo más pronto posible.
 					</p>
-					<form name='Formulario-Portafolio' className='space-y-8' netlify>
+					<form
+						name='contact'
+						className='space-y-8'
+						method='post'
+						data-netlify='true'
+						data-netlify-honeypot='bot-field'>
+						<input type='hidden' name='form-name' value='contact' />
 						<div>
 							<label
 								htmlFor='email'
