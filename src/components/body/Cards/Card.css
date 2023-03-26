@@ -64,7 +64,6 @@ i {
 
 .card .face.face1 {
 	position: relative;
-	background: #333;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -99,7 +98,7 @@ i {
 	align-items: center;
 	padding: 10px;
 	box-sizing: border-box;
-	box-shadow: 0 0 50px rgba(2, 132, 199, 0.8);
+	box-shadow: 0 0 30px -2px rgba(2, 132, 199, 0.8);
 	transform: translateY(-100px);
 }
 
@@ -110,15 +109,17 @@ i {
 .card .face.face2 .content p {
 	margin: 0;
 	padding: 0;
+	font-size: 20px;
+	font-style: italic;
 	text-align: center;
-	color: #a9a4a4;
+	color: #e0d6d6;
 }
 
 .card .face.face2 .content h3 {
-	margin: 0 0 10px 0;
+	margin: 10px 0 10px 0;
 	padding: 0;
 	color: #fff;
-	font-size: 20px;
+	font-size: 15px;
 	text-align: center;
 	color: #a9a4a4;
 }

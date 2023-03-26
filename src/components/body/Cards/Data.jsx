@@ -4,6 +4,7 @@ import Daxan from '../../../assets/daxan.jpg'
 import IPS from '../../../assets/ipsmintic.jpg'
 import Seguimiento from '../../../assets/seguimiento-pacientes.jpg'
 import ControlGastos from '../../../assets/controlgastos.jpg'
+import CotizadorCriptos from '../../../assets/cotizadorcripto.jpg'
 
 export const paginas = [
 	{
@@ -41,5 +42,11 @@ export const paginas = [
 		imageUrl: ControlGastos,
 		address: 'https://controlgastos-mauro.netlify.app/',
 		description: 'Control de Gastos con un Presupuesto Base',
+	},
+	{
+		id: 7,
+		imageUrl: CotizadorCriptos,
+		address: 'https://cotizadorcripto-mauro.netlify.app/',
+		description: 'Cotizador de Criptomonedas en Tiempo Real',
 	},
 ]

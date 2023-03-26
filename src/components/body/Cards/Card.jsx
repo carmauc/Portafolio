@@ -1,6 +1,6 @@
-import './Card.css';
+import './Card.css'
 const Card = ({ data, open }) => {
-	const { address, description, imageUrl } = data;
+	const { address, description, imageUrl } = data
 	return (
 		<div className='card' onClick={open}>
 			<div className='face face1'>
@@ -17,7 +17,7 @@ const Card = ({ data, open }) => {
 						<a
 							href={address}
 							target='_blank'
-							className='hover:underline'
+							className='hover:underline, hover:text-sky-600'
 							rel='noreferrer'>
 							{address}{' '}
 						</a>
@@ -25,7 +25,7 @@ const Card = ({ data, open }) => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Card;
+export default Card
