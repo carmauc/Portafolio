@@ -54,7 +54,7 @@
 
 .modal__close-wrapper {
 	all: unset;
-	position: absolute;
+	position: relative;
 	cursor: pointer;
 }
 
@@ -95,7 +95,7 @@
 	.modal__close-icon {
 		width: 35px;
 		height: 35px;
-		color: #cacaca;
+		color: #ab0000;
 	}
 }
 

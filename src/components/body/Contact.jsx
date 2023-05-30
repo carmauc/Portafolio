@@ -13,7 +13,7 @@ const Contact = () => {
 	return (
 		<section
 			id='contact'
-			className='relative bg-zinc-900 md:p-12 min-h-screen pt-32 md:pt-0 h-auto w-auto pb-12'>
+			className='relative bg-zinc-900 md:p-12 min-h-screen md:pt-0 h-auto w-auto pb-12'>
 			<h2 className='flex justify-center items-center text-1xl sm:text-2xl md:text-4xl lg:text-5xl'>
 				{[...'Contacto'].map((value, index) => (
 					<motion.span
