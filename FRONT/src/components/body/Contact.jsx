@@ -61,8 +61,15 @@ const Contact = () => {
 					<form
 						name='contact'
 						className='space-y-8'
+<<<<<<< HEAD:FRONT/src/components/body/Contact.jsx
 						form onSubmit={handleSubmit}>
 						{/* <input type='hidden' name='form-name' value='contact' /> */}
+=======
+						method='POST'
+						data-netlify='true'
+						data-netlify-honeypot='bot-field'>
+						<input type='hidden' name='form-name' value='contact' />
+>>>>>>> 60d01632685f1aba290525aa229e9db1aa2637c4:src/components/body/Contact.jsx
 						<div>
 							<label
 								htmlFor='email'
