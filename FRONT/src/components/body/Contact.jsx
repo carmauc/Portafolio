@@ -10,11 +10,38 @@ import {
 import '../Drop.css'
 
 const Contact = () => {
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		  const response = await api.enviarFormulario(formData);
+		  console.log(response); // Manejar la respuesta del servidor
+	    Swal.fire({
+		title: '¡Enviado!',
+		text: 'Tu formulario ha sido enviado con éxito.',
+		icon: 'success',
+		confirmButtonText: 'OK',
+	  });
+		   // Manejar errores al enviar el formulario
+		   setResetForm(true);
+	
+		} catch (error) {
+		  console.error('Error al enviar el formulario:', error.message);
+		  Swal.fire({
+			title: '¡Error en el Servidor!',
+			text: 'Tu formulario no ha sido enviado.',
+			icon: 'error',
+			confirmButtonText: 'OK',
+		  });
+		}
+	  };
+
+
+
 	return (
 		<section
 			id='contact'
 			className='relative bg-zinc-900 md:p-12 min-h-screen md:pt-0 h-auto w-auto pb-12'>
-			<h2 className='flex justify-center items-center text-1xl sm:text-2xl md:text-4xl lg:text-5xl'>
+			<h2 className='flex justify-center items-center text-1xl sm:text-2xl md:text-4xl lg:text-5xl cursor-pointer'>
 				{[...'Contacto'].map((value, index) => (
 					<motion.span
 						variants={value}
@@ -34,10 +61,8 @@ const Contact = () => {
 					<form
 						name='contact'
 						className='space-y-8'
-						method='post'
-						data-netlify='true'
-						data-netlify-honeypot='bot-field'>
-						<input type='hidden' name='form-name' value='contact' />
+						form onSubmit={handleSubmit}>
+						{/* <input type='hidden' name='form-name' value='contact' /> */}
 						<div>
 							<label
 								htmlFor='email'

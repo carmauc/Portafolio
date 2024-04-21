@@ -7,7 +7,7 @@ const Section3 = () => {
 		<div
 			id='section3'
 			className='relative bg-zinc-900  min-h-screen h-auto w-auto flex flex-col justify-center items-center pt-28 md:pt-0 pb-32'>
-			<h2 className='text-1xl sm:text-2xl md:text-4xl lg:text-5xl m-12'>
+			<h2 className='text-1xl sm:text-2xl md:text-4xl lg:text-5xl m-12 cursor-pointer'>
 				{[...`Mi${sp}Portafolio`].map((value, index) => (
 					<motion.span
 						variants={value}

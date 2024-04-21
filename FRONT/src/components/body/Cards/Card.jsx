@@ -12,10 +12,11 @@ const Card = ({ data, open }) => {
 			</div>
 			<div className='face face2'>
 				<div className='content'>
-					<h2>{title}</h2>
+					<h2 className=' font-semibold'>{title}</h2>
 					<p>{description}</p>
 					
 					<h3>
+						
 						<a
 							href={address}
 							target='_blank'
@@ -24,7 +25,7 @@ const Card = ({ data, open }) => {
 							{address}{' '}
 						</a>
 					</h3>
-					<p className=' text-xs'>{description2}</p>
+					<p className= ' font-medium'>{description2}</p>
 					
 				</div>
 			</div>

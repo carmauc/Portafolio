@@ -7,8 +7,8 @@ const Section2 = () => {
 		<section
 			id='section2'
 			className='relative bg-zinc-900 min-h-screen h-auto w-auto flex flex-wrap justify-center md:grid md:grid-cols-2 '>
-			<div className='flex flex-col justify-center items-center  md:m-10 '>
-				<h2 className='text-1xl sm:text-2xl md:text-4xl lg:text-5xl m-12 '>
+			<div className='flex flex-col justify-center items-center  md:m-10'>
+				<h2 className='text-1xl sm:text-2xl md:text-4xl lg:text-4xl m-12 cursor-pointer'>
 					{[...`Sobre${sp}Mí`].map((value, index) => (
 						<motion.span
 							variants={value}

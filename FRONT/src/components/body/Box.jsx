@@ -41,7 +41,7 @@ const Box = () => {
 			variants={container}
 			initial='hidden'
 			animate='visible'
-			className='text-2xl sm:text-4xl md:text-6xl lg:text-7xl md:ml-24'>
+			className='text-2xl sm:text-4xl md:text-6xl lg:text-7xl md:ml-24 cursor-pointer'>
 			<h1>
 				{[...nombre].map((value, index) => (
 					<motion.span

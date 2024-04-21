@@ -60,7 +60,7 @@ const Skills = () => {
 	]
 
 	return (
-		<div className='grid grid-cols-3 mt-8'>
+		<div className='grid grid-cols-3 mt-8 cursor-pointer'>
 			{skills.map(item => (
 				<img
 					className='hover:animate-rubber w-20 p-2'
