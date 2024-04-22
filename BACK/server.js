@@ -3,13 +3,14 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Configurar bodyParser para analizar las solicitudes POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
   const transporter = nodemailer.createTransport({
     service: "Gmail",

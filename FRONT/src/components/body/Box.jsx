@@ -73,14 +73,13 @@ const Box = () => {
 			<p className='w-fit animate-fadein text-gray-500 text-sm md:text-2xl mt-9'>
 				Front End Developer
 			</p>
-
 			<a
 				href='https://wa.me/573128135693?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
 				target='_blank'
-				className='px-2 py-1  sm:py-1.5 sm:px-4 relative border border-sky-600 brightness-150 font-semibold tracking-wide leading-none overflow-hidden hover:text-teal-600 group'
+				className='relative md:w-1/3 mt-10 px-2 py-1 block sm:py-1.5 sm:px-4 overflow-hidden  border border-sky-600 brightness-150 font-semibold tracking-wide leading-none hover:text-teal-600 group'
 				type='button'
 				rel='noreferrer'>
-				<span className='-translate-x-full ease-in duration-700 group-hover:translate-x-0 -skew-x-12 absolute h-full -left-5 w-96 inset-0 bg-gradient-to-br from-sky-600 brightness-150  to-cyan-400'></span>
+				<span className='absolute -translate-x-full ease-in duration-700 group-hover:translate-x-0 -skew-x-12  h-full -left-5 w-96 inset-0 bg-gradient-to-br from-sky-600 brightness-150  to-cyan-400'></span>
 				<span className='relative text-xl inset-0 flex justify-center items-center font-bold text-sky-600 brightness-150 transition-colors duration-300 ease-in-out group-hover:text-gray-900'>
 					Contáctame !
 				</span>

@@ -5,38 +5,48 @@ import {
 	PhoneIcon,
 	EnvelopeIcon,
 } from '@heroicons/react/24/outline'
-
-// import '../navBar/Icons.jsx'
+import api from '../../../services/api'
+import  { useState, useEffect } from 'react'
 import '../Drop.css'
 
 const Contact = () => {
 
-	// const handleSubmit = async (e) => {
-	// 	e.preventDefault();
-	// 	  const response = await api.enviarFormulario(formData);
-	// 	  console.log(response); // Manejar la respuesta del servidor
-	//     Swal.fire({
-	// 	title: '¡Enviado!',
-	// 	text: 'Tu formulario ha sido enviado con éxito.',
-	// 	icon: 'success',
-	// 	confirmButtonText: 'OK',
-	//   });
-	// 	   // Manejar errores al enviar el formulario
-	// 	   setResetForm(true);
+	const [nombre, setNombre] = useState('');
+	const [correo, setCorreo] = useState('');
+	const [asunto, setAsunto] = useState('');
+	const [mensaje, setMensaje] = useState('');
+	const [resetForm, setResetForm] = useState(false); // state para reiniciar formulario al enviar
+
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const formData = new FormData();
+			formData.append('nombre', nombre);
+			formData.append('correo', correo);
+			formData.append('asunto', asunto);
+			formData.append('mensaje', mensaje);
+
 	
-	// 	} catch (error) {
-	// 	  console.error('Error al enviar el formulario:', error.message);
-	// 	  Swal.fire({
-	// 		title: '¡Error en el Servidor!',
-	// 		text: 'Tu formulario no ha sido enviado.',
-	// 		icon: 'error',
-	// 		confirmButtonText: 'OK',
-	// 	  });
-	// 	}
-	//   };
+			const response = await api.enviarFormulario(formData);
+		  console.log(response); // Manejar la respuesta del servidor
+	    alert( "Mensaje Enviado");
+		setResetForm(true);
+		} catch (error) {
+			console.log(error);
+	alert("Error en envío de mensaje.");
+		  };
+		}
 
-
-
+		useEffect(() => {
+			if (resetForm) {
+			  // Reiniciar todos los estados a sus valores iniciales
+			  setNombre('');
+			  setCorreo('');
+			  setMensaje('');
+			  setAsunto('');
+			}
+		  }, [resetForm]);
 	return (
 		<section
 			id='contact'
@@ -61,12 +71,29 @@ const Contact = () => {
 					<form
 						name='contact'
 						className='space-y-8'
-						// form onSubmit={handleSubmit}>
-						// {/* <input type='hidden' name='form-name' value='contact' /> */}
-						method='POST'
-						data-netlify='true'
-						data-netlify-honeypot='bot-field'>
+						onSubmit={handleSubmit}>
+						{/* <input type='hidden' name='form-name' value='contact' /> */}
+				
 						<input type='hidden' name='form-name' value='contact' />
+
+
+						<div>
+							<label
+								htmlFor='nombre'
+								className=' mb-2 text-sm font-medium text-gray-300'>
+								Tu Nombre
+							</label>
+
+							<input
+								type='nombre'
+								name='nombre'
+								id='nombre'
+								className=' focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
+								placeholder='Tu nombre'
+								required
+								onChange={(e) => setNombre(e.target.value)}
+							/>
+						</div>
 						<div>
 							<label
 								htmlFor='email'
@@ -81,6 +108,7 @@ const Contact = () => {
 								className=' focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
 								placeholder='nombre@gmail.com'
 								required
+								onChange={(e) => setCorreo(e.target.value)}
 							/>
 						</div>
 
@@ -97,6 +125,8 @@ const Contact = () => {
 								className='focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
 								placeholder='Asunto'
 								required
+								onChange={(e) => setAsunto(e.target.value)}
+
 							/>
 						</div>
 						<div className='sm:col-span-2'>
@@ -110,7 +140,10 @@ const Contact = () => {
 								name='message'
 								rows='6'
 								className='focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white  '
-								placeholder='Mensaje'></textarea>
+								placeholder='Mensaje'
+								onChange={(e) => setMensaje(e.target.value)}
+								>
+								</textarea>
 						</div>
 
 						<button
