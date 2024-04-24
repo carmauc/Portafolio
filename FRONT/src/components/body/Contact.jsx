@@ -19,24 +19,25 @@ const Contact = () => {
 
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
-		try {
-			const formData = new FormData();
-			formData.append('nombre', nombre);
-			formData.append('correo', correo);
-			formData.append('asunto', asunto);
-			formData.append('mensaje', mensaje);
-
-	
-			const response = await api.enviarFormulario(formData);
-		  console.log(response); // Manejar la respuesta del servidor
-	    alert( "Mensaje Enviado");
-		setResetForm(true);
-		} catch (error) {
-			console.log(error);
-	alert("Error en envío de mensaje.");
-		  };
-		}
+        e.preventDefault();
+        try {
+            const formData = {
+                nombre,
+                correo,
+                asunto,
+                mensaje
+              };
+        
+            
+            const response = await api.enviarFormulario(formData);
+            console.log(response); // Puedes hacer lo que necesites con los datos de la respuesta    
+            alert("Mensaje Enviado");
+            setResetForm(true)
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error.message);
+            alert("Error en envío de mensaje");
+        }
+    };
 
 		useEffect(() => {
 			if (resetForm) {
@@ -69,14 +70,8 @@ const Contact = () => {
 						puedes llenar este formulario, responderé lo más pronto posible.
 					</p>
 					<form
-						name='contact'
 						className='space-y-8'
 						onSubmit={handleSubmit}>
-						{/* <input type='hidden' name='form-name' value='contact' /> */}
-				
-						<input type='hidden' name='form-name' value='contact' />
-
-
 						<div>
 							<label
 								htmlFor='nombre'
@@ -85,12 +80,13 @@ const Contact = () => {
 							</label>
 
 							<input
-								type='nombre'
+								type='text'
 								name='nombre'
 								id='nombre'
 								className=' focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
 								placeholder='Tu nombre'
 								required
+								value={nombre}
 								onChange={(e) => setNombre(e.target.value)}
 							/>
 						</div>
@@ -108,6 +104,7 @@ const Contact = () => {
 								className=' focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
 								placeholder='nombre@gmail.com'
 								required
+								value={correo}
 								onChange={(e) => setCorreo(e.target.value)}
 							/>
 						</div>
@@ -125,6 +122,7 @@ const Contact = () => {
 								className='focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white '
 								placeholder='Asunto'
 								required
+								value={asunto}
 								onChange={(e) => setAsunto(e.target.value)}
 
 							/>
@@ -141,6 +139,7 @@ const Contact = () => {
 								rows='6'
 								className='focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white  '
 								placeholder='Mensaje'
+								value={mensaje}
 								onChange={(e) => setMensaje(e.target.value)}
 								>
 								</textarea>
@@ -148,7 +147,8 @@ const Contact = () => {
 
 						<button
 							className='py-2 px-4 relative border border-sky-600 brightness-150 font-semibold tracking-wide leading-none overflow-hidden hover:text-teal-600 group'
-							type='submit'>
+							type='submit'
+							value='Enviar'>
 							<span className='-translate-x-full ease-in duration-700 group-hover:translate-x-0 -skew-x-12 absolute h-full -left-5 w-96 inset-0 bg-gradient-to-br from-sky-600 brightness-150  to-cyan-400 '></span>
 							<span className='relative text-sm inset-0 flex justify-center items-center font-bold text-sky-600 brightness-150 transition-colors duration-100 ease-in-out group-hover:text-gray-900'>
 								Enviar
