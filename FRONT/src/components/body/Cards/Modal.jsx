@@ -10,18 +10,18 @@ const Modal = ({ data, close }) => {
 				src={imageUrl}
 				
 			/>
-<div className='fixed bottom-0 left-0 w-full flex justify-around items-center'>
+<div className='fixed bottom-0 left-0 w-full flex justify-around items-center bg-black'>
 			<a
 				href={address}
 				target='_blank'
-				className='flex justify-center items-center bg-black hover:brightness-150 w-full h-12 text-sm md:text-lg text-white hover:text-sky-600 '
+				className='flex items-center hover:brightness-150 h-12 text-sm md:text-lg text-white hover:text-sky-600 '
 				rel='noreferrer'>
 				Visitar Sitio
 			</a>
 			{usuario != null && (
 			<p
 				target='_blank'
-				className='flex justify-center items-center bg-black w-full h-12 text-xs md:text-md text-white'
+				className='flex items-center h-12 text-xs md:text-md text-white'
 				rel='noreferrer'>
 				{usuario}<br/>{contraseña}
 			</p>
@@ -30,7 +30,7 @@ const Modal = ({ data, close }) => {
 			<a
 				href={repo}
 				target='_blank'
-				className='flex bg-black brightness-150 w-full h-12'
+				className='flex brightness-150 h-12'
 				rel='noreferrer'>
 				<svg
 									className='absolute w-10 h-10 fill-white hover:fill-[#F1502F]'
