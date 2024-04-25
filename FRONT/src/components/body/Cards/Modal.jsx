@@ -10,18 +10,18 @@ const Modal = ({ data, close }) => {
 				src={imageUrl}
 				
 			/>
-<div className='fixed bottom-0 left-0 w-full flex justify-around items-center bg-black'>
+<div className='fixed bottom-0 left-0 w-full flex flex-col md:flex-row md:justify-around items-center bg-black'>
 			<a
 				href={address}
 				target='_blank'
-				className='flex items-center hover:brightness-150 h-12 text-sm md:text-lg text-white hover:text-sky-600 '
+				className='flex justify-center items-center hover:brightness-150 h-12 text-sm md:text-lg text-white hover:text-sky-600 '
 				rel='noreferrer'>
 				Visitar Sitio
 			</a>
 			{usuario != null && (
 			<p
 				target='_blank'
-				className='flex items-center h-12 text-xs md:text-md text-white'
+				className='flex justify-center items-center h-12 text-xs md:text-md text-white'
 				rel='noreferrer'>
 				{usuario}<br/>{contraseña}
 			</p>
