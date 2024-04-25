@@ -18,7 +18,7 @@ svg {
 	stroke-dashoffset: 7000;
 	animation-name: animate2;
 	animation-iteration-count: infinite;
-	animation-duration: 3.5s;
+	animation-duration: 3s;
 	animation-timing-function: linear;
 	/* animation-delay: 2s; */
 	animation-iteration-count: 2;
@@ -34,7 +34,7 @@ svg {
 
 	animation-name: animate1;
 	animation-iteration-count: infinite;
-	animation-duration: 3.5s;
+	animation-duration: 3s;
 	animation-timing-function: linear;
 	animation-iteration-count: 2;
 	animation-direction: alternate;

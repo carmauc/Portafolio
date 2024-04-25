@@ -10,7 +10,7 @@ const Modal = ({ data, close }) => {
 				src={imageUrl}
 				
 			/>
-<div className='fixed bottom-0 left-0 w-full flex justify-center items-center'>
+<div className='fixed bottom-0 left-0 w-full flex justify-around items-center'>
 			<a
 				href={address}
 				target='_blank'
@@ -30,7 +30,7 @@ const Modal = ({ data, close }) => {
 			<a
 				href={repo}
 				target='_blank'
-				className=' flex justify-center bg-black brightness-150 w-full h-12'
+				className='flex bg-black brightness-150 w-full h-12'
 				rel='noreferrer'>
 				<svg
 									className='absolute w-10 h-10 fill-white hover:fill-[#F1502F]'
