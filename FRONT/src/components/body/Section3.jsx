@@ -18,7 +18,7 @@ const Section3 = () => {
 				))}
 			</h2>
 			<p className='text-sm md:text-lg text-center text-white mb-5'>
-				Una pequeña galería de proyectos y micro-proyectos desarrollados por mí.
+				Una galería de proyectos y micro-proyectos desarrollados por mí.
 			</p>
 			<Tarjetas />
 		</div>

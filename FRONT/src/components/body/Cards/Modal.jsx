@@ -1,9 +1,9 @@
 import './Modal.css'
 import { XCircleIcon } from '@heroicons/react/24/outline'
 const Modal = ({ data, close }) => {
-	const { imageUrl, address, repo, description } = data
+	const { imageUrl, address, repo, usuario, contraseña } = data
 	return (
-		<div className='relative container rounded-2xl p-3 shadow-xl bg-black z-50 h-fit w-fit'>
+		<div className='relative container rounded-2xl p-3 shadow-xl bg-black z-40 h-fit w-fit'>
 			<img
 				className=' rounded-2xl mx-auto max-h-full  '
 				alt='captura pagina web'
@@ -18,7 +18,14 @@ const Modal = ({ data, close }) => {
 				rel='noreferrer'>
 				Visitar Sitio
 			</a>
-
+			{usuario != null && (
+			<p
+				target='_blank'
+				className='flex justify-center items-center bg-black w-full h-12 text-xs md:text-md text-white'
+				rel='noreferrer'>
+				{usuario}<br/>{contraseña}
+			</p>
+	)}
 			{repo != null && (
 			<a
 				href={repo}
@@ -34,7 +41,7 @@ const Modal = ({ data, close }) => {
 			</a>
 			)}
 			</div>
-			<button onClick={close} className=' absolute top-10 right-10'>
+			<button onClick={close} className='md:absolute md:top-10 md:right-10 z-50 top-20 right-10 fixed'>
 				<XCircleIcon className='w-10 h-10 stroke-slate-700 hover:stroke-orange-600'/>
 			</button>
 		</div>

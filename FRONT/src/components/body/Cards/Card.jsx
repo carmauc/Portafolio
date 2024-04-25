@@ -1,6 +1,6 @@
 import './Card.css'
 const Card = ({ data, open }) => {
-	const { address, title, description, description2, imageUrl } = data
+	const { address, title, description, usuario, imageUrl, contraseña } = data
 	return (
 		<div className='card' >
 			<div className='face face1' onClick={open}>
@@ -25,7 +25,8 @@ const Card = ({ data, open }) => {
 							{address}{' '}
 						</a>
 					</h3>
-					<p className= ' font-medium'>{description2}</p>
+					<p className= 'text-xs font-medium'>{usuario}</p>
+					<p className= 'text-xs font-medium'>{contraseña}</p>
 					
 				</div>
 			</div>

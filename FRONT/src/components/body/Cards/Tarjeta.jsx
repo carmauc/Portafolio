@@ -16,7 +16,7 @@ const Tarjeta = ({ data }) => {
 	return (
 		<section>
 			<Card data={data} open={openModal} />
-			{open && <Overlay close={closeModal}>{<Modal data={data} />}</Overlay>}
+			{open && <Overlay close={closeModal}>{<Modal data={data} close={closeModal} />}</Overlay>}
 		</section>
 	);
 };

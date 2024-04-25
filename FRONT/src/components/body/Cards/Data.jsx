@@ -71,7 +71,8 @@ export const paginas = [
 		address: 'https://ipsmintic.netlify.app/',
 		title: 'IPS Project',
 		description: `Proyecto MVC usando bases de Datos Relacionales. JAVA, SpringBoot, MySQL, HTML, CSS, JS`,
-		description2: "USUARIO: correo@gmail.com PASSWORD: 123456",
+		usuario: "USUARIO: correo@gmail.com",
+		contraseña: "PASSWORD: 123456",
 		repo: 'https://github.com/carmauc/IpsMintic'
 
 	},
@@ -81,7 +82,8 @@ export const paginas = [
 		address: 'https://majocadiplay.netlify.app/',
 		title: 'MajocadiPlay',
 		description: `Proyecto para la visualización de información de películas y series usando React, JAVA SpringBoot y mySQL`,
-		description2: "USUARIO: mauro PASSWORD: 1234",
+		usuario: "USUARIO: mauro",
+		contraseña: "PASSWORD: 1234",
 		repo: 'https://github.com/carmauc/MajocadiPlay'
 
 	},
