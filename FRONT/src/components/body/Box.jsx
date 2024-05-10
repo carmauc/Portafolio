@@ -74,7 +74,7 @@ const Box = () => {
 				Front End Developer
 			</p>
 			<a
-				href='https://wa.me/573128135693?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
+				href='https://wa.me/34607823575?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
 				target='_blank'
 				className='relative md:w-1/3 mt-10 px-2 py-1 block sm:py-1.5 sm:px-4 overflow-hidden  border border-sky-600 brightness-150 font-semibold tracking-wide leading-none hover:text-teal-600 group'
 				type='button'

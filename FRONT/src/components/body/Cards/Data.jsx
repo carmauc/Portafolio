@@ -28,7 +28,8 @@ export const paginas = [
 		imageUrl: 'https://res.cloudinary.com/dmurguugh/image/upload/v1713663701/Portafolio/xpandwerunner_lmhdqa.jpg',
 		address: 'https://xpandwerunner.netlify.app/',
 		title: 'XpandWeRunner',
-		description: 'Landing Page usando React Hooks, Tailwind CSS, Firebase'
+		description: 'Landing Page usando React Hooks, Tailwind CSS, Firebase',
+		repo: 'https://github.com/carmauc/LandingPage-Xpand'
 
 	},
 	{

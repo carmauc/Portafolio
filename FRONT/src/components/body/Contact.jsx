@@ -165,7 +165,7 @@ const Contact = () => {
 							</div>
 							<div className='flex flex-col ml-5 text-white'>
 								<h3 className='text-sky-600'>Ubicación</h3>
-								<p>Envigado, Antioquia</p>
+								<p>Barcelona, España</p>
 							</div>
 						</div>
 						<div className='flex p-4'>
@@ -174,7 +174,7 @@ const Contact = () => {
 							</div>
 							<div className='flex flex-col ml-5 text-white'>
 								<h3 className='text-sky-600'>Teléfono</h3>
-								<p>+57 312-813-5693</p>
+								<p>+34 607-823-575</p>
 							</div>
 						</div>
 						<div className='flex p-4'>
@@ -225,7 +225,7 @@ const Contact = () => {
 								</svg>
 							</a>
 							<a
-								href='https://wa.me/573128135693?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
+								href='https://wa.me/34607823575?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
 								target='_blank'
 								className=' relative w-9'
 								title='Whatsapp'
