@@ -106,6 +106,14 @@ export const paginas = [
 		repo: 'https://github.com/carmauc/GuitarLA_Remix'
 
 	},
+	{
+		id: 13,
+		imageUrl: 'https://res.cloudinary.com/dmurguugh/image/upload/v1716837519/Portafolio/d3kuazwwecwg8ziel9sm.png',
+		address: 'https://propinasyconsumo.netlify.app/',
+		title: 'Propinas y Consumo',
+		description: `Calculadora de propinas creada con React, TypeScript, Vite y Tailwind CSS, que utiliza custom hooks y useMemo.`,
+		repo: 'https://github.com/carmauc/Propinas_ReactTs'
+	},
 
 
 	
