@@ -4,6 +4,8 @@ import { Link } from 'react-scroll'
 const Header = () => {
 	const [navbar, setNavbar] = useState(false)
 
+
+
 	return (
 		<nav className='fixed px-4 md:px-4 py-3 w-full bg-zinc-900 z-50 '>
 			<div className='container flex flex-wrap items-center justify-between mx-auto'>

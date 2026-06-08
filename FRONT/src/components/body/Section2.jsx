@@ -20,8 +20,9 @@ const Section2 = () => {
 				</h2>
 
 				<p className='animate-fade text-white text-center text-sm md:text-lg '>
-					Desarrollador Front-End, experimentado en el diseño y desarrollo de
-					sitios web personalizados y responsivos.
+					Desarrollador Full Stack, experimentado en tecnologias de vanguardia como React, Next.js, MySQL, MongoDB, 
+					y entorno robusto en C# y Python/Django, para el diseño y desarrollo de
+					sitios web personalizados y responsivos con funcionalidades robustas y escalables.
 					<br /> <br /> Como persona soy adaptable, responsable y proactivo con
 					gusto por el aprendizaje constante, el trabajo remoto y siempre
 					abierto a nuevas oportunidades laborales.

@@ -7,47 +7,46 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Configurar bodyParser para analizar las solicitudes POST
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-  const transporter = nodemailer.createTransport({
-    service: "Gmail",
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-    
-  // Manejo de solicitudes POST desde tu aplicación de React
-  app.post('/enviar-correo', (req, res) => {
-    try {
-    const {nombre,correo,asunto,mensaje} = req.body;
-    console.log(nombre, correo, asunto, mensaje);
-      const mailOptions = {
-        from: 'carmauc339@gmail.com',
-        to: 'carmauc339@outlook.com',
-        subject: `${asunto}`,
-        text: `Nombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`
-        };
-    
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
-         transporter.sendMail(mailOptions);
+app.post('/enviar-correo', async (req, res) => {
+  try {
+    const { nombre, correo, asunto, mensaje } = req.body;
 
-        res.status(200).json({ message: 'Correo enviado con éxito' });
-        }
-        // });} 
-        catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Error al enviar el correo' });
-        }
-        });
+    if (!nombre?.trim() || !correo?.trim() || !asunto?.trim() || !mensaje?.trim()) {
+      return res.status(400).json({ error: 'Todos los campos son obligatorios' });
+    }
 
-// Inicia el servidor
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: 'carmauc339@outlook.com',
+      replyTo: correo.trim(),
+      subject: asunto.trim(),
+      text: `Nombre: ${nombre.trim()}\nCorreo: ${correo.trim()}\nMensaje: ${mensaje.trim()}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ message: 'Correo enviado con éxito' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error al enviar el correo' });
+  }
+});
+
 app.listen(PORT, () => {
-console.log(`Servidor escuchando en el puerto ${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

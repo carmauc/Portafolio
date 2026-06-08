@@ -7,6 +7,16 @@ import MYSQL from './Icons/MySQL-Dark.svg'
 import GITHUB from './Icons/Github-Dark.svg'
 import TAILWIND from './Icons/TailwindCSS-Dark.svg'
 import WORDPRESS from './Icons/Wordpress.svg'
+import TYPESCRIPT from './Icons/TypeScript.svg'
+import PYTHON from './Icons/Python-Dark.svg'
+import NODE from './Icons/NodeJS-Dark.svg'
+import JAVA from './Icons/Java-Dark.svg'
+import MAVEN from './Icons/Maven-Dark.svg'
+
+
+
+
+
 
 const Skills = () => {
 	const skills = [
@@ -56,6 +66,31 @@ const Skills = () => {
 			id: 9,
 			image: WORDPRESS,
 			name: 'WordPress',
+		},
+			{
+			id: 10,
+			image: TYPESCRIPT,
+			name: 'Typescript',
+		},
+		{
+				id: 11,
+			image: NODE,
+			name: 'Node',
+		},
+				{
+			id: 12,
+			image: PYTHON,
+			name: 'Python',
+		},
+	    		{
+			id: 13,
+			image: JAVA,
+			name: 'Java',
+		},
+		    		{
+			id: 14,
+			image: MAVEN,
+			name: 'Maven',
 		},
 	]
 

@@ -6,7 +6,7 @@ import {
 	EnvelopeIcon,
 } from '@heroicons/react/24/outline'
 import api from '../../../services/api'
-import  { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../Drop.css'
 
 const Contact = () => {
@@ -15,39 +15,26 @@ const Contact = () => {
 	const [correo, setCorreo] = useState('');
 	const [asunto, setAsunto] = useState('');
 	const [mensaje, setMensaje] = useState('');
-	const [resetForm, setResetForm] = useState(false); // state para reiniciar formulario al enviar
-
+	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const formData = {
-                nombre,
-                correo,
-                asunto,
-                mensaje
-              };
-        
-            
-            const response = await api.enviarFormulario(formData);
-            console.log(response); // Puedes hacer lo que necesites con los datos de la respuesta    
-            alert("Mensaje Enviado");
-            setResetForm(true)
-        } catch (error) {
-            console.error('Error al enviar el formulario:', error.message);
-            alert("Error en envío de mensaje");
-        }
-    };
+		e.preventDefault();
+		setLoading(true);
 
-		useEffect(() => {
-			if (resetForm) {
-			  // Reiniciar todos los estados a sus valores iniciales
-			  setNombre('');
-			  setCorreo('');
-			  setMensaje('');
-			  setAsunto('');
-			}
-		  }, [resetForm]);
+		try {
+			await api.enviarFormulario({ nombre, correo, asunto, mensaje });
+			alert('Mensaje enviado');
+			setNombre('');
+			setCorreo('');
+			setAsunto('');
+			setMensaje('');
+		} catch (error) {
+			console.error('Error al enviar el formulario:', error.message);
+			alert(error.message);
+		} finally {
+			setLoading(false);
+		}
+	};
 	return (
 		<section
 			id='contact'
@@ -139,6 +126,7 @@ const Contact = () => {
 								rows='6'
 								className='focus:outline-none focus:ring focus:outline-sky-600 block shadow-sm text-gray-900 text-sm rounded-lg  w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white  '
 								placeholder='Mensaje'
+								required
 								value={mensaje}
 								onChange={(e) => setMensaje(e.target.value)}
 								>
@@ -146,12 +134,13 @@ const Contact = () => {
 						</div>
 
 						<button
-							className='py-2 px-4 relative border border-sky-600 brightness-150 font-semibold tracking-wide leading-none overflow-hidden hover:text-teal-600 group'
+							className='py-2 px-4 relative border border-sky-600 brightness-150 font-semibold tracking-wide leading-none overflow-hidden hover:text-teal-600 group disabled:opacity-50 disabled:cursor-not-allowed'
 							type='submit'
+							disabled={loading}
 							value='Enviar'>
 							<span className='-translate-x-full ease-in duration-700 group-hover:translate-x-0 -skew-x-12 absolute h-full -left-5 w-96 inset-0 bg-gradient-to-br from-sky-600 brightness-150  to-cyan-400 '></span>
 							<span className='relative text-sm inset-0 flex justify-center items-center font-bold text-sky-600 brightness-150 transition-colors duration-100 ease-in-out group-hover:text-gray-900'>
-								Enviar
+								{loading ? 'Enviando...' : 'Enviar'}
 							</span>
 						</button>
 					</form>

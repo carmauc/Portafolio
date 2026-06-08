@@ -71,7 +71,7 @@ const Box = () => {
 				))}
 			</h1>
 			<p className='w-fit animate-fadein text-gray-500 text-sm md:text-2xl mt-9'>
-				Front End Developer
+				Full Stack Developer
 			</p>
 			<a
 				href='https://wa.me/34607823575?text=Hola,%20me%20interesan%20sus%20servicios%20como%20desarrollador%20web.'
