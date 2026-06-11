@@ -12,6 +12,7 @@ import PYTHON from './Icons/Python-Dark.svg'
 import NODE from './Icons/NodeJS-Dark.svg'
 import JAVA from './Icons/Java-Dark.svg'
 import MAVEN from './Icons/Maven-Dark.svg'
+import DOCKER from './Icons/docker.svg'
 
 
 
@@ -88,10 +89,15 @@ const Skills = () => {
 			name: 'Java',
 		},
 		    		{
-			id: 14,
-			image: MAVEN,
-			name: 'Maven',
-		},
+				id: 14,
+				image: MAVEN,
+				name: 'Maven',
+			},
+			{
+				id: 15,
+				image: DOCKER,
+				name: 'Docker',
+			},
 	]
 
 	return (

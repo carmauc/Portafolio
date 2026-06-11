@@ -114,7 +114,20 @@ export const paginas = [
 		description: `Calculadora de propinas creada con React, TypeScript, Vite y Tailwind CSS, que utiliza custom hooks y useMemo.`,
 		repo: 'https://github.com/carmauc/Propinas_ReactTs'
 	},
+	{
+		id: 14,
+		imageUrl: 'https://res.cloudinary.com/dmurguugh/image/upload/v1781210583/Portafolio/confianza_komayt.png',
+		address: 'https://dev-confianza-front.ariadna.co/',
+		title: 'Financiera Confianza',
+		description: `Desarrollado con Next.js y React 19, Radix UI accesibles y estilos fluidos con Sass (SCSS). El proyecto cuenta con un sistema de arrastrar y soltar interactivo usando DnD Kit para flujos personalizados, y el manejo del estado del carrito o productos se realiza mediante Zustand para una alta performance.`,
+	},
+	{
+		id: 15,
+		imageUrl: '	https://res.cloudinary.com/dmurguugh/image/upload/v1781210583/Portafolio/ipawsport_yi4qzv.png',
+		address: 'https://ipawsport.com/',
+		title: 'iPawsport',
+		description: `Proyecto creado en lenguaje PHP para tramitar documentación y permisos de viaje para mascotas`,
+	},
 
 
-	
 ]
